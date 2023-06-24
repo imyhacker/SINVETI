@@ -107,20 +107,7 @@ class ClientController extends Controller
     {
         $data = Biodata::where('email', Auth::user()->email)->first();
         $kerja = Survei::where('email', Auth::user()->email)->first();
-        if($kerja == NULL){
-            $data = Survei::create([
-                'email' => Auth::user()->email,
-
-                'status' => 'kerja'
-            ]);
-        }
-        else{
-            $data = Survei::where('email', Auth::user()->email)->first()->update([
-                'email' => Auth::user()->email,
-
-                'status' => 'kerja'
-            ]);
-        }
+        
         return view('Dashboard/Client/Survei/Kerja/kerja', compact('data', 'kerja'));
 
     }
@@ -148,6 +135,8 @@ class ClientController extends Controller
                 'tanggal_mulai_kerja' => $req->tanggal_mulai_kerja,
                 'alamat_tempat_kerja' => $req->alamat_tempat_kerja,
                 'saran' => $req->saran,
+                'status' => 'kerja',
+
             ]);
             return redirect()->back();
         }else{
@@ -163,6 +152,8 @@ class ClientController extends Controller
                 'tanggal_mulai_kerja' => $req->tanggal_mulai_kerja,
                 'alamat_tempat_kerja' => $req->alamat_tempat_kerja,
                 'saran' => $req->saran,
+                'status' => 'kerja',
+
 
             ]);
             return redirect()->back();
@@ -172,20 +163,7 @@ class ClientController extends Controller
     {
         $data = Biodata::where('email', Auth::user()->email)->first();
         $kuliah = Survei::where('email', Auth::user()->email)->first();
-        if($kuliah == NULL){
-            $data = Survei::create([
-                'email' => Auth::user()->email,
-
-                'status' => 'kuliah'
-            ]);
-        }
-        else{
-            $data = Survei::where('email', Auth::user()->email)->first()->update([
-                'email' => Auth::user()->email,
-
-                'status' => 'kuliah'
-            ]);
-        }
+       
         return view('Dashboard/Client/Survei/Kuliah/kuliah', compact('data', 'kuliah'));
 
     }
@@ -213,6 +191,8 @@ class ClientController extends Controller
                 'tanggal_masuk_kampus' => $req->tanggal_masuk_kampus,
                 'alamat_kampus' => $req->alamat_kampus,
                 'saran' => $req->saran,
+                'tahun_ajaran' => $req->tahun_ajaran,
+                'status' => 'kuliah',
             ]);
             return redirect()->back();
         }else{
@@ -228,6 +208,9 @@ class ClientController extends Controller
                 'tanggal_masuk_kampus' => $req->tanggal_masuk_kampus,
                 'alamat_kampus' => $req->alamat_kampus,
                 'saran' => $req->saran,
+                'tahun_ajaran' => $req->tahun_ajaran,
+                'status' => 'kuliah',
+
 
             ]);
             return redirect()->back();

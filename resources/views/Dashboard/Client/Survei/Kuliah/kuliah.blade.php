@@ -84,6 +84,18 @@
                                         @enderror
                                     </div>
                                     <div class="form-group">
+                                        <label>Lulus Tahun Ajaran</label>
+                                        <input type="text" value="{{$kerja->tahun_ajaran ?? ''}}"
+                                            class="form-control @error('tahun_ajaran') is-invalid @enderror"
+                                            name="tahun_ajaran" placeholder="Lulus Tahun Ajaran 20xx / 20xx">
+                                        @error('tahun_ajaran')
+                                        <div id="validationServer03Feedback" class="invalid-feedback">
+                                            {{$message}}
+                                        </div>
+                                        @enderror
+                                    </div>
+
+                                    <div class="form-group">
                                         <label>Nama Kampus</label>
                                         <input type="text" value="{{$kerja->nama_kampus ?? ''}}"
                                             class="form-control @error('nama_kampus') is-invalid @enderror"

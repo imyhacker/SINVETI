@@ -23,6 +23,7 @@ return new class extends Migration
             $table->string('nama_ayah')->nullable();
             $table->string('alamat')->nullable();
 
+            $table->string('tahun_ajaran')->nullable();
             $table->string('status')->nullable();
 
             $table->string('nama_kampus')->nullable();
