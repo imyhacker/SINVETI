@@ -25,22 +25,24 @@
             </ul>
             </li>
           @endcan
-
+@can('isAdmin')
             <li class="dropdown active">
               <a href="#" class="nav-link has-dropdown"><i class="fas fa-th-large"></i> <span>Data</span></a>
               <ul class="dropdown-menu">
-                <li><a class="nav-lin beep beep-sidebar" href="{{route('data_siswa')}}">Data Siswa</a></li>
-                <li><a class="nav-lin beep beep-sidebar" href="{{route('dokumen')}}">Data Survei</a></li>                
+                <li><a class="nav-lin beep beep-sidebar"
+                href="{{route('data_siswa')}}">Data Survei</a></li>
+             
             </ul>
             </li>
-          
+@endcan          
            
           </ul>
-
+@can('isUser')
           <div class="mt-4 mb-4 p-3">
             <a href="{{route('survei')}}" class="btn btn-primary btn-lg btn-block btn-icon-split">
               <i class="fas fa-rocket"></i> Survei
             </a>
-          </div>        
+          </div>
+          @endcan
         </aside>
       </div>

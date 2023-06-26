@@ -248,4 +248,8 @@ class ClientController extends Controller
             ]);
             return redirect()->back()->with('success', 'Data sudah berhasil terupdate');
     }
+    public function hapus_siswa($id){
+      $data = Survei::find($id)->delete();
+return redirect()->back()->with('success', 'Data sudah berhasil terhapus');
+    }
 }

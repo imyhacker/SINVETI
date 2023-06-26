@@ -4,6 +4,7 @@
       <div class="navbar-bg"></div>
       <x-dcore.nav />
       <x-dcore.sidebar />
+      <x-dcore.notif />
       <div class="main-content">
         <section class="section">
 
@@ -38,7 +39,7 @@
             <td>{{$d->status}}</td>
             <td>
               <a href="{{route('edit_siswa', $d->id)}}" class="btn btn-primary"><i class="fas fa-edit"></i></a>
-                                    <a href="" class="btn btn-danger"><i class="fas fa-trash"></i></a>
+                                    <a href="{{route('hapus_siswa', $d->id)}}" class="btn btn-danger"><i class="fas fa-trash"></i></a>
             </td>
         </tr>
        @endforeach
