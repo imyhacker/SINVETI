@@ -100,8 +100,7 @@
                                         <label>Nama Kampus</label>
                                         <input type="text" value="{{$kuliah->nama_kampus ?? ''}}"
                                             class="form-control @error('nama_kampus') is-invalid @enderror"
-                                            name="nama_kampus" placeholder="Nama
-                                            Kampus">
+                                            name="nama_kampus" placeholder="Nama kampus">
                                         @error('nama_kampus')
                                         <div id="validationServer03Feedback" class="invalid-feedback">
                                             {{$message}}
