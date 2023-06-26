@@ -31,6 +31,11 @@
               <ul class="dropdown-menu">
                 <li><a class="nav-lin beep beep-sidebar"
                 href="{{route('data_siswa')}}">Data Survei</a></li>
+                   <li><a class="nav-lin beep beep-sidebar"
+                href="">Data Alumni</a></li>
+                <li><a class="nav-lin beep beep-sidebar"
+                href="">Data Akun</a></li>
+             
              
             </ul>
             </li>

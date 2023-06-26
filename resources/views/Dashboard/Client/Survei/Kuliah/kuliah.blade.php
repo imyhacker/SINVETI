@@ -86,7 +86,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label>Lulus Tahun Ajaran</label>
-                                        <input type="text" value="{{$kerja->tahun_ajaran ?? ''}}"
+                                        <input type="text" value="{{$kuliah->tahun_ajaran ?? ''}}"
                                             class="form-control @error('tahun_ajaran') is-invalid @enderror"
                                             name="tahun_ajaran" placeholder="Lulus Tahun Ajaran 20xx / 20xx">
                                         @error('tahun_ajaran')
@@ -98,9 +98,10 @@
 
                                     <div class="form-group">
                                         <label>Nama Kampus</label>
-                                        <input type="text" value="{{$kerja->nama_kampus ?? ''}}"
+                                        <input type="text" value="{{$kuliah->nama_kampus ?? ''}}"
                                             class="form-control @error('nama_kampus') is-invalid @enderror"
-                                            name="nama_kampus" placeholder="Nama Tempat Kerja">
+                                            name="nama_kampus" placeholder="Nama
+                                            Kampus">
                                         @error('nama_kampus')
                                         <div id="validationServer03Feedback" class="invalid-feedback">
                                             {{$message}}
@@ -109,9 +110,10 @@
                                     </div>
                                     <div class="form-group">
                                         <label>Tanggal Masuk Kampus</label>
-                                        <input type="date" value="{{$kerja->tanggal_masuk_kampus ?? ''}}"
+                                        <input type="date" value="{{$kuliah->tanggal_masuk_kampus ?? ''}}"
                                             class="form-control @error('tanggal_masuk_kampus') is-invalid @enderror"
-                                            name="tanggal_masuk_kampus" placeholder="Tanggal Mulai Kerja">
+                                            name="tanggal_masuk_kampus"
+                                            placeholder="Tanggal Masuk Kampus">
                                         @error('tanggal_masuk_kampus')
                                         <div id="validationServer03Feedback" class="invalid-feedback">
                                             {{$message}}
@@ -123,7 +125,7 @@
                                         <textarea
                                             class="form-control @error('alamat_kampus') is-invalid @enderror"
                                             name="alamat_kampus" id="exampleFormControlTextarea1" rows="3"
-                                            placeholder="Alamat Tempat Kerja">{{$kerja->alamat_kampus ?? ''}}</textarea>
+                                            placeholder="Alamat Kampus">{{$kuliah->alamat_kampus ?? ''}}</textarea>
                                         @error('alamat_kampus')
                                         <div id="validationServer03Feedback" class="invalid-feedback">
                                             {{$message}}
@@ -135,7 +137,7 @@
                                         <textarea
                                             class="form-control @error('saran') is-invalid @enderror"
                                             name="saran" id="exampleFormControlTextarea1" rows="3"
-                                            placeholder="Saran Untuk Sekolah">{{$kerja->saran ?? ''}}</textarea>
+                                            placeholder="Saran Untuk Sekolah">{{$kuliah->saran ?? ''}}</textarea>
                                         @error('saran')
                                         <div id="validationServer03Feedback" class="invalid-feedback">
                                             {{$message}}
