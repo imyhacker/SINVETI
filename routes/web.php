@@ -47,3 +47,15 @@ Route::group(['prefix' => '/home/survei'], function(){
     Route::post('/update_kuliah', [ClientController::class, 'update_kuliah'])->name('update_kuliah');
 
 });
+
+Route::group(['prefix' => '/home/data'], function ($id= null){
+  Route::get('/data_siswa', [ClientController::class, 'data_siswa'])->name('data_siswa');
+    Route::get('/data_siswa/{id}/edit_siswa', [ClientController::class,
+    'edit_siswa'])->name('edit_siswa', $id);
+  Route::post('/data_siswa/{id}/edit_siswa/update_siswa',
+  [ClientController::class, 'update_siswa'])->name('update_siswa', $id);
+  
+  
+  
+  
+});

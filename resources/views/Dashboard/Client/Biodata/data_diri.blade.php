@@ -4,6 +4,7 @@
         <div class="navbar-bg"></div>
         <x-dcore.nav />
         <x-dcore.sidebar />
+        <x-dcore.notif />
         <div class="main-content">
             <section class="section">
 
